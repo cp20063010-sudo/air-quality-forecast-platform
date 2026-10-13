@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Realtime Forecast</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="/static/dashboard.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Dự Báo Chất Lượng Không Khí Realtime</h1>
+                <p class="subtitle">Dự án 3: Random Forest & Ensemble Forecasting Platform</p>
+            </div>
+            <div id="statusBadge" class="badge">Đang kết nối...</div>
+        </header>
+
+        <section class="controls">
+            <label for="stationSelect"><strong>Chọn trạm quan trắc:</strong></label>
+            <select id="stationSelect"></select>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <h3>PM2.5 Hiện tại</h3>
+                <span id="observedPm25">--</span>
+                <p>µg/m³</p>
+            </div>
+            <div class="card highlight">
+                <h3>Dự báo (+1 Giờ)</h3>
+                <span id="predictedPm25">--</span>
+                <p>µg/m³</p>
+            </div>
+        </section>
+
+        <section class="chart-container">
+            <canvas id="forecastChart"></canvas>
+        </section>
+    </div>
+</body>
+</html>

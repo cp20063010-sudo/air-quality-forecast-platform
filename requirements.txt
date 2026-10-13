@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pandas
+numpy
+pyarrow
+scikit-learn
+joblib
+httpx
+websockets
+jinja2
+pytest
+pytest-asyncio
+python-dotenv
